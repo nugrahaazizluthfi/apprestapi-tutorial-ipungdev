@@ -6,7 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["rest","api","nodejs"],
+  "keywords": [
+    "rest",
+    "api",
+    "nodejs"
+  ],
   "author": "luthfi aziz nugraha",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
 }
