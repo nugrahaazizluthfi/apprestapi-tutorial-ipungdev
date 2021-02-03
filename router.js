@@ -5,4 +5,5 @@ module.exports = function (app) {
 
   app.route('/').get(controller.index);
   app.route('/show-mahasiswa').get(controller.show);
+  app.route('/show-mahasiswa/:id').get(controller.showById);
 };
