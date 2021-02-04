@@ -9,4 +9,5 @@ module.exports = function (app) {
   app.route('/mahasiswa').post(controller.insert);
   app.route('/mahasiswa/:id').put(controller.update);
   app.route('/mahasiswa/:id').delete(controller.delete);
+  app.route('/nested').get(controller.nested);
 };

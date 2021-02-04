@@ -65,3 +65,16 @@ exports.delete = function (req, res) {
     }
   );
 };
+
+exports.nested = function (req, res) {
+  const SQL = `
+    SELECT * FROM krs 
+    JOIN mahasiswa ON mahasiswa.id = krs.mahasiswa_id
+    JOIN matakuliah ON matakuliah.id = krs.matakuliah_id
+  `;
+  connection.query(SQL, (err, rows, fields) => {
+    if (err) throw err;
+
+    response.oknested(rows, res);
+  });
+};
